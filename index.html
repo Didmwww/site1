@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пиньяты для праздников</title>
+    <link rel="stylesheet" type="text/css" href="siet.css">
+</head>
+<body>
+    <header>
+
+        <div class="menu-icon" onclick="togglePanel()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <div class="header-logo">
+            <img src="./img/logo.png" alt="Maryland - творимо дива разом!">
+            <span>Maryland - творимо свято разом!</span>
+        </div>
+
+    </header>
+
+
+    <div class="side-panel" id="side-panel">
+
+        <button class="close-btn" onclick="togglePanel()">&times;</button>
+
+        <h2>Навігаційна панель</h2>
+        <ul>
+            <li><a href="#home" onclick="navigateTo(event, '#home')">Головна</a></li>
+            <li><a href="#catalog" onclick="navigateTo(event, '#catalog')">Каталог</a></li>
+            <li><a href="#how-to-order" onclick="navigateTo(event, '#how-to-order')">Як замовити</a></li>
+            <li><a href="#features" onclick="navigateTo(event, '#features')">Наші переваги</a></li>
+            <li><a href="#reviews" onclick="navigateTo(event, '#reviews')">Відгуки</a></li>
+            <li><a href="#contacts" onclick="navigateTo(event, '#contacts')">Контакти</a></li>
+        </ul>
+    </div>
+
+
+    <section class="banner" id="home">
+        <div class="slideshow">
+            <div class="slides">
+                <img src="./img/slide1.png" alt="Slide 1">
+                <img src="./img/slide2.png" alt="Slide 2">
+                <img src="./img/slide3.png" alt="Slide 3">
+            </div>
+        </div>
+    
+        <div class="banner-content">
+            <h1 style="color:#ffffff">Додайте яскравих емоцій вашому святу!</h1>
+            <p style="color:#ffffff">Піньята – це справжнє диво, яке приходить на свято, щоб подарувати радість, сміх і трохи магії. Вона, мов герой із казки, з’являється серед гостей, вся у яскравих кольорах, загадкова та сповнена таємниці. Усередині ховається скарб – те, про що мріє кожна дитина і навіть дорослий, адже всім нам інколи хочеться вірити в казку. Що ж там? Солодощі, подарунки, сюрпризи, ніби вони прилетіли з самого серця чарівного світу.</p>
+            <button onclick="navigateToCatalog()">Подивитись каталог</button>
+        </div>
+    </section>
+
+<section class="categories" id="catalog">
+    <h2>Каталог:</h2>
+    <div class="search-container">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="search" placeholder="Пошук піньяти..." oninput="filterProducts()">
+        <span class="clear-icon" onclick="clearSearch()">❌</span>
+    </div>
+
+    <div class="product-scroll-wrapper">
+
+
+        <div class="product-scroll-container">
+            <div class="product-list">
+                <div class="product-ad" data-name="Піньята Бамблбі">
+                    <div class="image-container">
+                        <img src="./img/trans.png" alt="Піньята Бамблбі">
+                    </div>
+                    <div class="text-container">
+                        <h3>Піньята Бамблбі</h3>
+                        <p>Ціна: ? грн</p>
+                    </div>
+                    <button onclick="showModal('modal1')">Детальніше</button>
+                </div>
+                <div class="product-ad" data-name="Піньята Маквін">
+                    <div class="image-container">
+                        <img src="./img/mama.png" alt="Піньята Маквін">
+                    </div>
+                    <div class="text-container">
+                        <h3>Піньята Маквін</h3>
+                        <p>Ціна: ? грн</p>
+                    </div>
+                    <button onclick="showModal('modal2')">Детальніше</button>
+                </div>
+
+
+                <div class="product-ad" data-name="Піньята Гаррі Поттер">
+                    <div class="image-container">
+                        <img src="./img/potter.png" alt="Піньята Гаррі Поттер">
+                    </div>
+                    <div class="text-container">
+                        <h3>Піньята Гаррі Поттер</h3>
+                        <p>Ціна: ? грн</p>
+                    </div>
+                    <button onclick="showModal('modal3')">Детальніше</button>
+                </div>
+
+
+                <div class="product-ad" data-name="Піньята Куромі">
+                    <div class="image-container">
+                        <img src="./img/kuromi.jpg" alt="Піньята Куромі">
+                    </div>
+                    <div class="text-container">
+                        <h3>Піньята Куромі</h3>
+                        <p>Ціна: 550 грн</p>
+                    </div>
+                    <button onclick="showModal('modal4')">Детальніше</button>
+                </div>
+
+
+                <div class="product-ad" data-name="Піньята Поні">
+                    <div class="image-container">
+                        <img src="./img/poni.png" alt="Піньята Поні">
+                    </div>
+                    <div class="text-container">
+                        <h3>Піньята Поні</h3>
+                        <p>Ціна: 550 грн</p>
+                    </div>
+                    <button onclick="showModal('modal5')">Детальніше</button>
+                </div>
+
+                <div class="product-ad" data-name="Піньята Динозавр">
+                    <div class="image-container">
+                        <img src="./img/t-rex.png" alt="Піньята Динозавр">
+                    </div>
+                    <div class="text-container">
+                        <h3>Піньята Динозавр</h3>
+                        <p>Ціна: 550 грн</p>
+                    </div>
+                    <button onclick="showModal('modal6')">Детальніше</button>
+                </div>
+
+                <div class="product-ad" data-name="Піньята Хелло Кіті">
+                    <div class="image-container">
+                        <img src="./img/kitti.png" alt="Піньята Хелло Кіті">
+                    </div>
+                    <div class="text-container">
+                        <h3>Піньята Хелло Кіті</h3>
+                        <p>Ціна: ? грн</p>
+                    </div>
+                    <button onclick="showModal('modal7')">Детальніше</button>
+                </div>
+
+                <div class="product-ad" data-name="Піньята Футбольна">
+                    <div class="image-container">
+                        <img src="./img/football.png" alt="Піньята Футбольна">
+                    </div>
+                    <div class="text-container">
+                        <h3>Піньята Футбольна</h3>
+                        <p>Ціна: ? грн</p>
+                    </div>
+                    <button onclick="showModal('modal8')">Детальніше</button>
+                </div>
+
+                <div class="product-ad" data-name="Піньята Барбі">
+                    <div class="image-container">
+                        <img src="./img/barbi.png" alt="Піньята Барбі">
+                    </div>
+                    <div class="text-container">
+                        <h3>Піньята Барбі</h3>
+                        <p>Ціна: ? грн</p>
+                    </div>
+                    <button onclick="showModal('modal9')">Детальніше</button>
+                </div>
+                
+                <div class="product-ad" data-name="Піньята Чікен Ган">
+                    <div class="image-container">
+                        <img src="./img/chiken.png" alt="Піньята Чікен Ган">
+                    </div>
+                    <div class="text-container">
+                        <h3>Піньята Чікен Ган</h3>
+                        <p>Ціна: 650 грн</p>
+                    </div>
+                    <button onclick="showModal('modal10')">Детальніше</button>
+                </div>
+
+                <div class="product-ad" data-name="Піньята Венздей">
+                    <div class="image-container">
+                        <img src="./img/wens.png" alt="Піньята Венздей">
+                    </div>
+                    <div class="text-container">
+                        <h3>Піньята Венздей</h3>
+                        <p>Ціна: 550 грн</p>
+                    </div>
+                    <button onclick="showModal('modal11')">Детальніше</button>
+                </div>
+
+                <div class="product-ad" data-name="Піньята Фортнайт">
+                    <div class="image-container">
+                        <img src="./img/fort.png" alt="Піньята Фортнайт">
+                    </div>
+                    <div class="text-container">
+                        <h3>Піньята Фортнайт</h3>
+                        <p>Ціна: 650 грн</p>
+                    </div>
+                    <button onclick="showModal('modal12')">Детальніше</button>
+                </div>
+
+                <div class="product-ad" data-name="Піньята Кріпер">
+                    <div class="image-container">
+                        <img src="./img/kriper.png" alt="Піньята Кріпер">
+                    </div>
+                    <div class="text-container">
+                        <h3>Піньята Кріпер</h3>
+                        <p>Ціна: 550 грн</p>
+                    </div>
+                    <button onclick="showModal('modal13')">Детальніше</button>
+                </div>
+                
+                <div class="product-ad" data-name="Піньята Сонік">
+                    <div class="image-container">
+                        <img src="./img/sonic.png" alt="Піньята Сонік">
+                    </div>
+                    <div class="text-container">
+                        <h3>Піньята Сонік</h3>
+                        <p>Ціна: 550 грн</p>
+                    </div>
+                    <button onclick="showModal('modal14')">Детальніше</button>
+                </div>
+
+                <div class="product-ad" data-name="Піньята Супер Маріо">
+                    <div class="image-container">
+                        <img src="./img/mario.png" alt="Піньята Супер Маріо">
+                    </div>
+                    <div class="text-container">
+                        <h3>Піньята Супер Маріо</h3>
+                        <p>Ціна: 550 грн</p>
+                    </div>
+                    <button onclick="showModal('modal15')">Детальніше</button>
+                </div>
+
+                <div class="product-ad" data-name="Піньята Веселка">
+                    <div class="image-container">
+                        <img src="./img/rainbow.png" alt="Піньята Веселка">
+                    </div>
+                    <div class="text-container">
+                        <h3>Піньята Веселка</h3>
+                        <p>Ціна: 550 грн</p>
+                    </div>
+                    <button onclick="showModal('modal16')">Детальніше</button>
+                </div>
+
+                <div class="product-ad" data-name="Піньята Наруто">
+                    <div class="image-container">
+                        <img src="./img/naruto.png" alt="Піньята Наруто">
+                    </div>
+                    <div class="text-container">
+                        <h3>Піньята Наруто</h3>
+                        <p>Ціна: 550 грн</p>
+                    </div>
+                    <button onclick="showModal('modal17')">Детальніше</button>
+                </div>
+
+                <div class="product-ad" data-name="Піньята Huggy Wuggy">
+                    <div class="image-container">
+                        <img src="./img/vagi.png" alt="Піньята Huggy Wuggy">
+                    </div>
+                    <div class="text-container">
+                        <h3>Піньята Huggy Wuggy</h3>
+                        <p>Ціна: ? грн</p>
+                    </div>
+                    <button onclick="showModal('modal18')">Детальніше</button>
+                </div>
+
+                <div class="product-ad" data-name="Піньята Міньйон">
+                    <div class="image-container">
+                        <img src="./img/minion.png" alt="Піньята Міньйон">
+                    </div>
+                    <div class="text-container">
+                        <h3>Піньята Міньйон</h3>
+                        <p>Ціна: ? грн</p>
+                    </div>
+                    <button onclick="showModal('modal19')">Детальніше</button>
+                </div>
+
+                <div class="product-ad" data-name="Піньята Angry Birds">
+                    <div class="image-container">
+                        <img src="./img/angri.png" alt="Піньята Angry Birds">
+                    </div>
+                    <div class="text-container">
+                        <h3>Піньята Angry Birds</h3>
+                        <p>Ціна: ? грн</p>
+                    </div>
+                    <button onclick="showModal('modal20')">Детальніше</button>
+                </div>
+
+                <div class="product-ad" data-name="Піньята Brawl Stars">
+                    <div class="image-container">
+                        <img src="./img/mega.png" alt="Піньята Brawl Stars">
+                    </div>
+                    <div class="text-container">
+                        <h3>Піньята Brawl Stars</h3>
+                        <p>Ціна: ? грн</p>
+                    </div>
+                    <button onclick="showModal('modal21')">Детальніше</button>
+                </div>
+
+                <div class="product-ad" data-name="Піньята Minecraft">
+                    <div class="image-container">
+                        <img src="./img/mine.png" alt="Піньята Minecraft">
+                    </div>
+                    <div class="text-container">
+                        <h3>Піньята Minecraft</h3>
+                        <p>Ціна: ? грн</p>
+                    </div>
+                    <button onclick="showModal('modal22')">Детальніше</button>
+                </div>
+                <div class="product-ad" data-name="Піньята Спайдермен">
+                    <div class="image-container">
+                        <img src="./img/spider.png" alt="Піньята Спайдермен">
+                    </div>
+                    <div class="text-container">
+                        <h3>Піньята Спайдермен</h3>
+                        <p>Ціна: ? грн</p>
+                    </div>
+                    <button onclick="showModal('modal23')">Детальніше</button>
+                </div>
+
+                <div class="product-ad" data-name="Піньята Щенячий патруль">
+                    <div class="image-container">
+                        <img src="./img/patrol.png" alt="Піньята Щенячий патруль">
+                    </div>
+                    <div class="text-container">
+                        <h3>Піньята Щенячий патруль</h3>
+                        <p>Ціна: ? грн</p>
+                    </div>
+                    <button onclick="showModal('modal24')">Детальніше</button>
+                </div>
+
+                <div class="product-ad" data-name="Піньята Фламінго">
+                    <div class="image-container">
+                        <img src="./img/flamingo.png" alt="Піньята Фламінго">
+                    </div>
+                    <div class="text-container">
+                        <h3>Піньята Фламінго</h3>
+                        <p>Ціна: ? грн</p>
+                    </div>
+                    <button onclick="showModal('modal25')">Детальніше</button>
+                </div>
+                <div class="product-ad" data-name="Піньята Among Us">
+                    <div class="image-container">
+                        <img src="./img/among.png" alt="Піньята Among Us">
+                    </div>
+                    <div class="text-container">
+                        <h3>Піньята Among Us</h3>
+                        <p>Ціна: ? грн</p>
+                    </div>
+                    <button onclick="showModal('modal26')">Детальніше</button>
+                </div>
+
+                <div class="product-ad" data-name="Піньята Кекс">
+                    <div class="image-container">
+                        <img src="./img/keks.png" alt="Піньята Кекс">
+                    </div>
+                    <div class="text-container">
+                        <h3>Піньята Кекс</h3>
+                        <p>Ціна: ? грн</p>
+                    </div>
+                    <button onclick="showModal('modal27')">Детальніше</button>
+                </div>
+
+                <div class="product-ad" data-name="Піньята Черепашки Ніндзя">
+                    <div class="image-container">
+                        <img src="./img/turturls.png" alt="Піньята Черепашки Ніндзя">
+                    </div>
+                    <div class="text-container">
+                        <h3>Піньята Черепашки Ніндзя</h3>
+                        <p>Ціна: ? грн</p>
+                    </div>
+                    <button onclick="showModal('modal28')">Детальніше</button>
+                </div>
+
+                <div class="product-ad" data-name="Піньята у вигляді цифри 2">
+                    <div class="image-container">
+                        <img src="./img/cifra.png" alt="Піньята у вигляді цифри 2">
+                    </div>
+                    <div class="text-container">
+                        <h3>Піньята у вигляді цифри 2</h3>
+                        <p>Ціна: ? грн</p>
+                    </div>
+                    <button onclick="showModal('modal29')">Детальніше</button>
+                </div>
+
+                <div class="product-ad" data-name="Піньята Зірка">
+                    <div class="image-container">
+                        <img src="./img/zvezda.png" alt="Піньята Зірка">
+                    </div>
+                    <div class="text-container">
+                        <h3>Піньята Зірка</h3>
+                        <p>Ціна: ? грн</p>
+                    </div>
+                    <button onclick="showModal('modal30')">Детальніше</button>
+                </div>
+
+                <div class="product-ad" data-name="Піньята Pop It">
+                    <div class="image-container">
+                        <img src="./img/popit.png" alt="Піньята Pop It">
+                    </div>
+                    <div class="text-container">
+                        <h3>Піньята Pop It</h3>
+                        <p>Ціна: ? грн</p>
+                    </div>
+                    <button onclick="showModal('modal31')">Детальніше</button>
+                </div>
+
+                <div class="product-ad" data-name="Піньята Супер-герої">
+                    <div class="image-container">
+                        <img src="./img/super.png" alt="Піньята Супер-герої">
+                    </div>
+                    <div class="text-container">
+                        <h3>Піньята Супер-герої</h3>
+                        <p>Ціна: ? грн</p>
+                    </div>
+                    <button onclick="showModal('modal32')">Детальніше</button>
+                </div>
+
+                <div class="product-ad" data-name="Піньята Русалочка">
+                    <div class="image-container">
+                        <img src="./img/rusalochka.png" alt="Піньята Русалочка">
+                    </div>
+                    <div class="text-container">
+                        <h3>Піньята Русалочка</h3>
+                        <p>Ціна: ? грн</p>
+                    </div>
+                    <button onclick="showModal('modal33')">Детальніше</button>
+                </div>
+
+                <div class="product-ad" data-name="Піньята Tik Tok">
+                    <div class="image-container">
+                        <img src="./img/tiktok.png" alt="Піньята Tik Tok">
+                    </div>
+                    <div class="text-container">
+                        <h3>Піньята Tik Tok</h3>
+                        <p>Ціна: ? грн</p>
+                    </div>
+                    <button onclick="showModal('modal34')">Детальніше</button>
+                </div>
+                
+                <div class="product-ad" data-name="Піньята Бетмен">
+                    <div class="image-container">
+                        <img src="./img/batman.png" alt="Піньята Бетмен">
+                    </div>
+                    <div class="text-container">
+                        <h3>Піньята Бетмен</h3>
+                        <p>Ціна: ? грн</p>
+                    </div>
+                    <button onclick="showModal('modal35')">Детальніше</button>
+                </div>
+
+                <div class="product-ad" data-name="Піньята Міні Маус">
+                    <div class="image-container">
+                        <img src="./img/minimaus.png" alt="Піньята Міні Маус">
+                    </div>
+                    <div class="text-container">
+                        <h3>Піньята Міні Маус</h3>
+                        <p>Ціна: ? грн</p>
+                    </div>
+                    <button onclick="showModal('modal36')">Детальніше</button>
+                </div>
+
+                <div class="product-ad" data-name="Піньята Морозиво">
+                    <div class="image-container">
+                        <img src="./img/icecream.png" alt="Піньята Морозиво">
+                    </div>
+                    <div class="text-container">
+                        <h3>Піньята Морозиво</h3>
+                        <p>Ціна: ? грн</p>
+                    </div>
+                    <button onclick="showModal('modal37')">Детальніше</button>
+                </div>
+
+                <div class="product-ad" data-name="Піньята до Школи">
+                    <div class="image-container">
+                        <img src="./img/buk.png" alt="Піньята до Школи">
+                    </div>
+                    <div class="text-container">
+                        <h3>Піньята до Школи</h3>
+                        <p>Ціна: ? грн</p>
+                    </div>
+                    <button onclick="showModal('modal38')">Детальніше</button>
+                </div>
+
+                <div class="product-ad" data-name="Піньята Єдиноріжки">
+                    <div class="image-container">
+                        <img src="./img/ponibig.png" alt="Піньята Єдиноріжки">
+                    </div>
+                    <div class="text-container">
+                        <h3>Піньята Єдиноріжки</h3>
+                        <p>Ціна: ? грн</p>
+                    </div>
+                    <button onclick="showModal('modal39')">Детальніше</button>
+                </div>
+
+                <div class="product-ad" data-name="Піньята Трактор">
+                    <div class="image-container">
+                        <img src="./img/tractor.png" alt="Піньята Трактор">
+                    </div>
+                    <div class="text-container">
+                        <h3>Піньята Трактор</h3>
+                        <p>Ціна: ? грн</p>
+                    </div>
+                    <button onclick="showModal('modal40')">Детальніше</button>
+                </div>
+
+                <div class="product-ad" data-name="Піньята Серденько">
+                    <div class="image-container">
+                        <img src="./img/serd.png" alt="Піньята Серденько">
+                    </div>
+                    <div class="text-container">
+                        <h3>Піньята Серденько</h3>
+                        <p>Ціна: ? грн</p>
+                    </div>
+                    <button onclick="showModal('modal41')">Детальніше</button>
+                </div>
+
+                <div class="product-ad" data-name="Піньята Колесо">
+                    <div class="image-container">
+                        <img src="./img/seven.png" alt="Піньята Колесо">
+                    </div>
+                    <div class="text-container">
+                        <h3>Піньята Колесо</h3>
+                        <p>Ціна: ? грн</p>
+                    </div>
+                    <button onclick="showModal('modal42')">Детальніше</button>
+                </div>
+
+                <div class="product-ad" data-name="Піньята Луна">
+                    <div class="image-container">
+                        <img src="./img/luna.png" alt="Піньята Луна">
+                    </div>
+                    <div class="text-container">
+                        <h3>Піньята Луна</h3>
+                        <p>Ціна: ? грн</p>
+                    </div>
+                    <button onclick="showModal('modal43')">Детальніше</button>
+                </div>
+
+                <div class="product-ad" data-name="Піньята у вигляді цифри 3">
+                    <div class="image-container">
+                        <img src="./img/tree.png" alt="Піньята у вигляді цифри 3">
+                    </div>
+                    <div class="text-container">
+                        <h3>Піньята у вигляді цифри 3</h3>
+                        <p>Ціна: ? грн</p>
+                    </div>
+                    <button onclick="showModal('modal44')">Детальніше</button>
+                </div>
+
+                <div class="product-ad" data-name="Піньята Пончик">
+                    <div class="image-container">
+                        <img src="./img/dunats.png" alt="Піньята Пончик">
+                    </div>
+                    <div class="text-container">
+                        <h3>Піньята Пончик</h3>
+                        <p>Ціна: ? грн</p>
+                    </div>
+                    <button onclick="showModal('modal45')">Детальніше</button>
+                </div>
+
+                <div class="product-ad" data-name="Піньята у вигляді цифри 5">
+                    <div class="image-container">
+                        <img src="./img/piatsuper.png" alt="Піньята у вигляді цифри 5">
+                    </div>
+                    <div class="text-container">
+                        <h3>Піньята у вигляді цифри 5</h3>
+                        <p>Ціна: ? грн</p>
+                    </div>
+                    <button onclick="showModal('modal46')">Детальніше</button>
+                </div>
+
+                <div class="product-ad" data-name="Піньята Хмаринка">
+                    <div class="image-container">
+                        <img src="./img/tucha.png" alt="Піньята Хмаринка">
+                    </div>
+                    <div class="text-container">
+                        <h3>Піньята Хмаринка</h3>
+                        <p>Ціна: ? грн</p>
+                    </div>
+                    <button onclick="showModal('modal47')">Детальніше</button>
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="expand-button-container">
+        <button class="expand-button" onclick="toggleExpand()">Показати всі піньяти</button>
+    </div>
+</section>
+
+    <div class="divider"></div>
+
+    <section class="how-to-order" id="how-to-order">
+        <h2 style="color:#000000; padding-left: 50px;">Як замовити</h2>
+        <p style="color:#000000; padding-left: 50px;">Замовлення піньяти – це просто та швидко! Ось кроки, які вам потрібно виконати:</p>
+        <p style="color:#000000; padding-left: 50px;">1. Оберіть піньяту з нашого каталога.</p>
+        <p style="color:#000000; padding-left: 50px;">2. Натисніть кнопку "Детальніше" та передивіться повну інформацію про піньяту.</p>
+        <p style="color:#000000; padding-left: 50px;">3. Натисніть кнопку "Замовити", та заповніть форму для замовлення.</p>
+        <p style="color:#000000; padding-left: 50px;">4. Та після всіх кроків натисніть кнопку замовити, та очікуйте коли з вами зв'яжуться.</p>
+        <p style="color:#ff0000; padding-left: 50px;"></p>
+        <p style="color:#ff0000; padding-left: 50px;">Важливва примітка:</p>
+        <p style="color:#000000; padding-left: 50px;">При замовленні піньяти 1-4 роки:</p>
+        <p style="color:#000000; padding-left: 50px;">Піньята буде з прорізаним дном, та ланцюжком за який достатньо потягнути, щоб наповнення висипалось.</p>
+        <p style="color:#000000; padding-left: 50px;">При замовленні піньяти 5-7 років:</p>
+        <p style="color:#000000; padding-left: 50px;">Піньята буде з прорізаним центром, по якому достатньо декілька разів вдарити, щоб наповнення висипалось.</p>
+        <p style="color:#000000; padding-left: 50px;">При замовленні піньяти 8-99 років:</p>
+        <p style="color:#000000; padding-left: 50px;">Піньята буде з надрізаним центром, по якому треба вдарити багато разів, щоб наповнення висипалось (придає драйву).</p>
+    </section>
+    <div class="modal" id="modal1">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal1')">&times;</span>
+            <img src="./img/trans.png">
+            <h3>Піньята Бамблбі</h3>
+            <p>Ціна: ? грн</p>
+            <p>СВЯТО ІЗ ТРАНСФОРМЕРАМИ 🤖</p>
+            <p>Як стати помічником трансформера та що для цього потрібно знати? Наші автоботи навчать вас цьому та проведуть цілу трансформер-підготовку💪</p>
+            <button class="order-btn" onclick="openOrderForm()">Замовити</button>
+        </div>
+    </div>
+
+    <div class="modal" id="modal2">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal2')">&times;</span>
+            <img src="./img/mama.png">
+            <h3>Піньята Маквін</h3>
+            <p>Ціна: ? грн</p>
+            <p>Піньята у вигляді Маквінааа😱👍</p>
+            <p>Чудове доповнення до тематичного свята🎉</p>
+            <p>А щоб зробити свято ще більш цікавим, радимо запросити персонажей з мультфільму 😎</p>
+            <p>Приблизний розмір: 70-90 см</p>
+            <button class="order-btn" onclick="openOrderForm()">Замовити</button>
+        </div>
+    </div>
+
+    <div class="modal" id="modal3">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal3')">&times;</span>
+            <img src="./img/potter.png" alt="Піньята Гаррі Поттер">
+            <h3>Піньята Гаррі Поттер</h3>
+            <p>Ціна: ? грн</p>
+            <p>Піньята в тематиці «Гаррі Поттер»</p>
+            <p>Сподобається всім шанувальникам цього захоплюючого фільму 🧙‍♀️</p>
+            <p>Приблизний розмір: 50 см</p>
+            <button class="order-btn" onclick="openOrderForm()">Замовити</button>
+        </div>
+    </div>
+
+    <div class="modal" id="modal4">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal4')">&times;</span>
+            <img src="./img/kuromi.jpg" alt="Піньята Куромі">
+            <h3>Піньята Куромі</h3>
+            <p>Ціна: 550 грн</p>
+            <p>Яскрава Піньята ручної роботи, нікого не залишить байдужим. З цією грою ніхто не буде нудьгувати на Вашому святі, фото з події будуть не раз переглядатися і змусять посміхнутися, згадавши, як всім було весело))).</p>
+            <p>Приблизний розмір: 50 см</p>
+            <button class="order-btn" onclick="openOrderForm()">Замовити</button>
+        </div>
+    </div>
+
+    <div class="modal" id="modal5">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal5')">&times;</span>
+            <img src="./img/poni.png" alt="Піньята Поні">
+            <h3>Піньята Поні</h3>
+            <p>Ціна: 550 грн</p>
+            <p>Чарівна Поні яскраве доповнення на свято💕</p>
+            <p>✨ Всередині піньяти паперове конфеті та кульки, є отвір для самостійного наповнення цукерками🍭🍬</p>
+            <p>Приблизний розмір: 50-60 см</p>
+            <button class="order-btn" onclick="openOrderForm()">Замовити</button>
+        </div>
+    </div>
+
+    <div class="modal" id="modal6">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal6')">&times;</span>
+            <img src="./img/t-rex.png" alt="Піньята Динозавр">
+            <h3>Піньята Динозавр</h3>
+            <p>Ціна: 550 грн</p>
+            <p>Піньята у формі динозара, для святкування Дня Народження юного дослідника 🔎🦖</p>
+            <p>Яскрава Піньята ручної роботи, нікого не залишить байдужим 🥳</p>
+            <p>З цією грою ніхто не буде нудьгувати на Вашому святі, фото з події будуть не раз переглядатися і змусять посміхнутися, згадавши, як всім було весело 📸 🤩</p>
+            <p>Приблизний розмір: 50 см</p>
+            <button class="order-btn" onclick="openOrderForm()">Замовити</button>
+        </div>
+    </div>
+
+    <div class="modal" id="modal7">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal7')">&times;</span>
+            <img src="./img/kitti.png" alt="Піньята Хелло Кіті">
+            <h3>Піньята Хелло Кіті</h3>
+            <p>Ціна: ? грн</p>
+            <p>🎉 День народження з піньятою Hello Kitty – це найкращий спосіб додати святковий настрій! 🐱💖</p>
+            <p>Яскраві моменти, сміх і купа солодощів – все, що потрібно для ідеального свята. Хто ще любить такі яскраві сюрпризи? 😍🎁</p>
+            <p>Приблизний розмір: 60-70 см</p>
+
+            <button class="order-btn" onclick="openOrderForm()">Замовити</button>
+        </div>
+    </div>
+
+    <div class="modal" id="modal8">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal8')">&times;</span>
+            <img src="./img/football.png" alt="Піньята Футбольна">
+            <h3>Піньята Футбольна</h3>
+            <p>Ціна: ? грн</p>
+            <p>Гооол!😱</p>
+            <p>Фанатам футболу присвячується! ⚽ Створюємо піньяти на індивідуальне замовлення з логотипом вашого улюбленого футбольного клубу! 🎉 Ідеальний сюрприз для вечірки, дня народження або просто для підняття настрою. 💥</p>
+            <p>Приблизний розмір: 50 см</p>
+            <button class="order-btn" onclick="openOrderForm()">Замовити</button>
+        </div>
+    </div>
+
+    <div class="modal" id="modal9">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal9')">&times;</span>
+            <img src="./img/barbi.png" alt="Піньята Барбі">
+            <h3>Піньята Барбі</h3>
+            <p>Ціна: ? грн</p>
+            <p>Піньята на святі це можливість для дітей зануритися в атмосферу свята і веселощів.
+            Піньята в стилі “Barbie” і розвеселить іменинницю, а також всіх запрошених гостей.</p>
+            <p>Приблизний розмір: 60-70 см</p>
+            <button class="order-btn" onclick="openOrderForm()">Замовити</button>
+        </div>
+    </div>
+
+    <div class="modal" id="modal10">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal10')">&times;</span>
+            <img src="./img/chiken.png" alt="Піньята Чікен Ган">
+            <h3>Піньята Чікен Ган</h3>
+            <p>Ціна: 650 грн</p>
+            <p>Це просто неймовірно😱</p>
+            <p>3Д Піньята Чікен Ган</p>
+            <p>✨ Всередині піньяти паперове конфеті та кульки, є отвір для самостійного наповнення цукерками🍭🍬</p>
+            <p>Приблизний розмір: 50 см</p>
+            <button class="order-btn" onclick="openOrderForm()">Замовити</button>
+        </div>
+    </div>
+    <div class="modal" id="modal11">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal11')">&times;</span>
+            <img src="./img/wens.png" alt="Піньята Венздей">
+            <h3>Піньята Венздей</h3>
+            <p>Ціна: 550 грн</p>
+            <p>Вже всім відома та улюблена піньята в стилі «Венздей» 🖤</p>
+            <p>✨ Всередині піньяти паперове конфеті та кульки, є отвір для самостійного наповнення цукерками🍭🍬</p>
+            <p>Приблизний розмір: 50 см</p>
+            <button class="order-btn" onclick="openOrderForm()">Замовити</button>
+        </div>
+    </div>
+    <div class="modal" id="modal12">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal12')">&times;</span>
+            <img src="./img/fort.png" alt="Піньята Фортнайт">
+            <h3>Піньята Фортнайт</h3>
+            <p>Ціна: 650 грн</p>
+            <p>✨ Всередині піньяти паперове конфеті та кульки, є отвір для самостійного наповнення цукерками🍭🍬</p>
+            <p>Приблизний розмір: 50 см</p>
+            <button class="order-btn" onclick="openOrderForm()">Замовити</button>
+        </div>
+    </div>
+    <div class="modal" id="modal13">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal13')">&times;</span>
+            <img src="./img/kriper.png" alt="Піньята Кріпер">
+            <h3>Піньята Кріпер</h3>
+            <p>Ціна: 550 грн</p>
+            <p>Піньята «Майнкрафт» 💣</p>
+            <p>✨ Всередині піньяти паперове конфеті та кульки, є отвір для самостійного наповнення цукерками🍭🍬</p>
+            <p>Приблизний розмір: 60 см</p>
+            <button class="order-btn" onclick="openOrderForm()">Замовити</button>
+        </div>
+    </div>
+    <div class="modal" id="modal14">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal14')">&times;</span>
+            <img src="./img/sonic.png" alt="Піньята Сонік">
+            <h3>Піньята Сонік</h3>
+            <p>Ціна: 550 грн</p>
+            <p>✨ Всередині піньяти паперове конфеті та кульки, є отвір для самостійного наповнення цукерками🍭🍬</p>
+            <p>Приблизний розмір: 50 см</p>
+            <button class="order-btn" onclick="openOrderForm()">Замовити</button>
+        </div>
+    </div>
+    <div class="modal" id="modal15">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal15')">&times;</span>
+            <img src="./img/mario.png" alt="Піньята Супер Маріо">
+            <h3>Піньята Супер Маріо</h3>
+            <p>Ціна: 550 грн</p>
+            <p>✨ Всередині піньяти паперове конфеті та кульки, є отвір для самостійного наповнення цукерками🍭🍬</p>
+            <p>Приблизний розмір: 60 см</p>
+            <button class="order-btn" onclick="openOrderForm()">Замовити</button>
+        </div>
+    </div>
+    <div class="modal" id="modal16">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal16')">&times;</span>
+            <img src="./img/rainbow.png" alt="Піньята Веселка">
+            <h3>Піньята Веселка</h3>
+            <p>Ціна: 550 грн</p>
+            <p>Ця яскрава та мила піньята Веселка додасть своїх барв святу💗</p>
+            <p>✨ Всередині піньяти паперове конфеті та кульки, є отвір для самостійного наповнення цукерками🍭🍬</p>
+            <p>Приблизний розмір: 60 см</p>
+            <button class="order-btn" onclick="openOrderForm()">Замовити</button>
+        </div>
+    </div>
+    <div class="modal" id="modal17">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal17')">&times;</span>
+            <img src="./img/naruto.png" alt="Піньята Наруто">
+            <h3>Піньята Наруто </h3>
+            <p>Ціна: 550 грн</p>
+            <p>Можливе виготовлення під замовлення, в будь-якому іншому кольорі і розмірі, з будь-яким малюнком або в іншій формі 🤩🎉</p>
+            <p>✨ Всередині піньяти паперове конфеті та кульки, є отвір для самостійного наповнення цукерками🍭🍬</p>
+            <p>Приблизний розмір: 60 см</p>
+            <button class="order-btn" onclick="openOrderForm()">Замовити</button>
+        </div>
+    </div>
+    <div class="modal" id="modal18">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal18')">&times;</span>
+            <img src="./img/vagi.png" alt="Піньята Huggy Wuggy">
+            <h3>Піньята Huggy Wuggy </h3>
+            <p>Ціна: ? грн</p>
+            <p>Піньята у вигляді персонажа комп'ютерної гри Huggy Wuggy🤪</p>
+            <p>✨ Всередині піньяти паперове конфеті та кульки, є отвір для самостійного наповнення цукерками🍭🍬</p>
+            <p>Приблизний розмір: 60 см</p>
+            <button class="order-btn" onclick="openOrderForm()">Замовити</button>
+        </div>
+    </div>
+    <div class="modal" id="modal19">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal19')">&times;</span>
+            <img src="./img/minion.png" alt="Піньята Міньйон">
+            <h3>Піньята Міньйон </h3>
+            <p>Ціна: ? грн</p>
+            <p>Піньята Міньйон - весела розвага на дитячому святі🤩</p>
+            <p>✨ Всередині піньяти паперове конфеті та кульки, є отвір для самостійного наповнення цукерками🍭🍬</p>
+            <p>Приблизний розмір: 60 см</p>
+            <button class="order-btn" onclick="openOrderForm()">Замовити</button>
+        </div>
+    </div>
+    <div class="modal" id="modal20">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal20')">&times;</span>
+            <img src="./img/angri.png" alt="Піньята Angry Birds">
+            <h3>Піньята Angry Birds </h3>
+            <p>Ціна: ? грн</p>
+            <p>Піньята Angry Birds підійде для дитячих свят та тематичних вечірок 💣</p>
+            <p>✨ Всередині піньяти паперове конфеті та кульки, є отвір для самостійного наповнення цукерками🍭🍬</p>
+            <p>Приблизний розмір: 60 см</p>
+            <button class="order-btn" onclick="openOrderForm()">Замовити</button>
+        </div>
+    </div>
+    <div class="modal" id="modal21">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal21')">&times;</span>
+            <img src="./img/mega.png" alt="Піньята Brawl Stars">
+            <h3>Піньята Brawl Stars </h3>
+            <p>Ціна: ? грн</p>
+            <p>✨ Всередині піньяти паперове конфеті та кульки, є отвір для самостійного наповнення цукерками🍭🍬</p>
+            <p>Приблизний розмір: 50 см</p>
+            <button class="order-btn" onclick="openOrderForm()">Замовити</button>
+        </div>
+    </div>
+    <div class="modal" id="modal22">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal22')">&times;</span>
+            <img src="./img/mine.png" alt="Піньята Minecraft">
+            <h3>Піньята Minecraft </h3>
+            <p>Ціна: ? грн</p>
+            <p>Ну хто ж з хоопчиків або навіть і дівчаток не обожнює цю гру?!😌</p>
+            <p>✨ Всередині піньяти паперове конфеті та кульки, є отвір для самостійного наповнення цукерками🍭🍬</p>
+            <p>Приблизний розмір: 50 см</p>
+            <button class="order-btn" onclick="openOrderForm()">Замовити</button>
+        </div>
+    </div>
+    <div class="modal" id="modal23">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal23')">&times;</span>
+            <img src="./img/spider.png" alt="Піньята Спайдермен">
+            <h3>Піньята  Спайдермен</h3>
+            <p>Ціна: ? грн</p>
+            <p>✨ Всередині піньяти паперове конфеті та кульки, є отвір для самостійного наповнення цукерками🍭🍬</p>
+            <p>Приблизний розмір: 50 см</p>
+            <button class="order-btn" onclick="openOrderForm()">Замовити</button>
+        </div>
+    </div>
+    <div class="modal" id="modal24">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal24')">&times;</span>
+            <img src="./img/patrol.png" alt="Піньята Щенячий патруль">
+            <h3>Піньята  Щенячий патруль</h3>
+            <p>Ціна: ? грн</p>
+            <p>А хто ж це тут в нас?</p>
+            <p>Ну звичайно ж, це ж Скай, Гончік та Маршал🐾</p>
+            <p>Герої щенячого патрулю- незмінні улюбленці малюків🥰 тому і для них ми підготували таку піньяту🚀</p>
+            <p>✨ Всередині піньяти паперове конфеті та кульки, є отвір для самостійного наповнення цукерками🍭🍬</p>
+            <p>Приблизний розмір: 50 см</p>
+            <button class="order-btn" onclick="openOrderForm()">Замовити</button>
+        </div>
+    </div>
+    <div class="modal" id="modal25">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal25')">&times;</span>
+            <img src="./img/flamingo.png" alt="Піньята Фламінго">
+            <h3>Піньята  Фламінго</h3>
+            <p>Ціна: ? грн</p>
+            <p>Такий чудовий варіант піньяти для дівчаток, які обожнюють рожевий колір та все, що з ним пов‘язано🤩💗</p>
+            <p>✨ Всередині піньяти паперове конфеті та кульки, є отвір для самостійного наповнення цукерками🍭🍬</p>
+            <p>Приблизний розмір: 60 см</p>
+            <button class="order-btn" onclick="openOrderForm()">Замовити</button>
+        </div>
+    </div>
+
+    <div class="modal" id="modal26">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal26')">&times;</span>
+            <img src="./img/among.png" alt="Піньята Among Us">
+            <h3>Піньята   Among Us</h3>
+            <p>Ціна: ? грн</p>
+            <p>Ми можемо виготовити амонга будь-якого кольору та з будь-якими додатками, відповідно самй грі Among us та вашим побажанням☺️🙌🎉</p>
+            <p>✨ Всередині піньяти паперове конфеті та кульки, є отвір для самостійного наповнення цукерками🍭🍬</p>
+            <p>Приблизний розмір: 50 см</p>
+            <button class="order-btn" onclick="openOrderForm()">Замовити</button>
+        </div>
+    </div>
+
+    <div class="modal" id="modal27">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal27')">&times;</span>
+            <img src="./img/keks.png" alt="Піньята Кекс">
+            <h3>Піньята   Кекс</h3>
+            <p>Ціна: ? грн</p>
+            <p>Наш новенький яскравий кексик🧁</p>
+            <p>На вигляд ну дууже смачний, от тільки їсти його категорично протипоказано😂</p>
+            <p>Натомість, ви можете зробити багато крутих фотографій і влаштувати розбиття піньяти із безліч смачних цукерок всередині🎉💗</p>
+            <p>Приблизний розмір: 50 см</p>
+            <button class="order-btn" onclick="openOrderForm()">Замовити</button>
+        </div>
+    </div>
+
+    <div class="modal" id="modal28">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal28')">&times;</span>
+            <img src="./img/turturls.png" alt="Піньята Черепашки Ніндзя">
+            <h3>Піньята Черепашки Ніндзя</h3>
+            <p>Ціна: ? грн</p>
+            <p>✨ Всередині піньяти паперове конфеті та кульки, є отвір для самостійного наповнення цукерками🍭🍬</p>
+            <p>Приблизний розмір: 50 см</p>
+            <button class="order-btn" onclick="openOrderForm()">Замовити</button>
+        </div>
+    </div>
+
+    <div class="modal" id="modal29">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal29')">&times;</span>
+            <img src="./img/cifra.png" alt="Піньята у вигляді цифри 2">
+            <h3>Піньята у вигляді цифри 2</h3>
+            <p>Ціна: ? грн</p>
+            <p>Чудовий аналог тематичним піньятам- піньята у вигляді цифри✨🎉</p>
+            <p>Також можна замовити будь яку іншу цифру</p>
+            <p>✨ Всередині піньяти паперове конфеті та кульки, є отвір для самостійного наповнення цукерками🍭🍬</p>
+            <p>Приблизний розмір: 50 см</p>
+            <button class="order-btn" onclick="openOrderForm()">Замовити</button>
+        </div>
+    </div>
+
+    <div class="modal" id="modal30">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal30')">&times;</span>
+            <img src="./img/zvezda.png" alt="Піньята Зірка">
+            <h3>Піньята Зірка</h3>
+            <p>Ціна: ? грн</p>
+            <p>Чудова піньята, яка підійде під різну тематику🙌✨</p>
+            <p>✨ Всередині піньяти паперове конфеті та кульки, є отвір для самостійного наповнення цукерками🍭🍬</p>
+            <p>Приблизний розмір: 50 см</p>
+            <button class="order-btn" onclick="openOrderForm()">Замовити</button>
+        </div>
+    </div>
+
+    <div class="modal" id="modal31">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal31')">&times;</span>
+            <img src="./img/popit.png" alt="Піньята Pop It">
+            <h3>Піньята Pop It</h3>
+            <p>Ціна: ? грн</p>
+            <p>Наразі, поп іт є мега популярним серед підлітків🎉</p>
+            <p>✨ Всередині піньяти паперове конфеті та кульки, є отвір для самостійного наповнення цукерками🍭🍬</p>
+            <p>Приблизний розмір: 50 см</p>
+            <button class="order-btn" onclick="openOrderForm()">Замовити</button>
+        </div>
+    </div>
+
+    <div class="modal" id="modal32">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal32')">&times;</span>
+            <img src="./img/popit.png" alt="Піньята Супер-герої">
+            <h3>Піньята Супер-герої</h3>
+            <p>Ціна: ? грн</p>
+            <p>Піньята з улюбленими героями Вашої дитини🙌</p>
+            <p>Уявіть реакцію Вашої дитинки при зустрічі із величезною яскравою піньятою в тематиці її/його улюблених героїв😍</p>
+            <p>Уявилии? Тепер радимо не зволікати, а швидше замовляти піньяту😌</p>
+            <p>Приблизний розмір: 50 см</p>
+            <button class="order-btn" onclick="openOrderForm()">Замовити</button>
+        </div>
+    </div>
+
+    <div class="modal" id="modal33">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal33')">&times;</span>
+            <img src="./img/rusalochka.png" alt="Піньята Русалочка">
+            <h3>Піньята Русалочка</h3>
+            <p>Ціна: ? грн</p>
+            <p>Улюблений мультфільм дитинства🤍</p>
+            <p>✨ Всередині піньяти паперове конфеті та кульки, є отвір для самостійного наповнення цукерками🍭🍬</p>
+            <p>Приблизний розмір: 50 см</p>
+            <button class="order-btn" onclick="openOrderForm()">Замовити</button>
+        </div>
+    </div>
+
+    <div class="modal" id="modal34">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal34')">&times;</span>
+            <img src="./img/tiktok.png" alt="Піньята Tik Tok">
+            <h3>Піньята Tik Tok</h3>
+            <p>Ціна: ? грн</p>
+            <p>Тік ток наразі є однією із найпопулярніших соціальних мереж🔝</p>
+            <p>Усі підлітки обожнюють тік ток та усе, що з ним пов‘язано✨</p>
+            <p>✨ Всередині піньяти паперове конфеті та кульки, є отвір для самостійного наповнення цукерками🍭🍬</p>
+            <p>Приблизний розмір: 50 см</p>
+            <button class="order-btn" onclick="openOrderForm()">Замовити</button>
+        </div>
+    </div>
+
+    <div class="modal" id="modal35">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal35')">&times;</span>
+            <img src="./img/batman.png" alt="Піньята Бетмен">
+            <h3>Піньята Бетмен</h3>
+            <p>Ціна: ? грн</p>
+            <p>БЕТМЕН піньята вже вирушає на ваше свято🤩🙌😎</p>
+            <p>Готові виготовити піньяти в тематиці будь-яких супергероїв💪</p>
+            <p>✨ Всередині піньяти паперове конфеті та кульки, є отвір для самостійного наповнення цукерками🍭🍬</p>
+            <p>Приблизний розмір: 50 см</p>
+            <button class="order-btn" onclick="openOrderForm()">Замовити</button>
+        </div>
+    </div>
+
+    <div class="modal" id="modal36">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal36')">&times;</span>
+            <img src="./img/minimaus.png" alt="Піньята Міні Маус">
+            <h3>Піньята Міні Маус</h3>
+            <p>Ціна: ? грн</p>
+            <p>Тематика свята МІКІ ТА МІНІ МАУС й досі залишається супер популярною, адже хто ж може не любити цих діснеївських персонажів💗✨☺️</p>
+            <p>Піньята у відповідній тематиці стане родзинкою вашого свята🙌😌</p>
+            <p>✨ Всередині піньяти паперове конфеті та кульки, є отвір для самостійного наповнення цукерками🍭🍬</p>
+            <p>Приблизний розмір: 50 см</p>
+            <button class="order-btn" onclick="openOrderForm()">Замовити</button>
+        </div>
+    </div>
+
+    <div class="modal" id="modal37">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal37')">&times;</span>
+            <img src="./img/icecream.png" alt="Піньята Морозиво">
+            <h3>Піньята Морозиво</h3>
+            <p>Ціна: ? грн</p>
+            <p>ЛІТО- ЧАС ДЛЯ НАЙСОЛОДШИХ ПІНЬЯТ🤤😍💗</p>
+            <p>Ось таку піньяту у вигляді смачного морозива нещодавно виготовили🍬🍦</p>
+            <p>Якщо ж у Ваших діток вже зовсім скоро планується день народження або будь-яка інша подія, у Вас ще є можливість замовити таке крутезне яскраве доповнення.🥳</p>
+            <p>✨ Всередині піньяти паперове конфеті та кульки, є отвір для самостійного наповнення цукерками🍭🍬</p>
+            <p>Приблизний розмір: 60-70 см</p>
+            <button class="order-btn" onclick="openOrderForm()">Замовити</button>
+        </div>
+    </div>
+
+    <div class="modal" id="modal38">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal38')">&times;</span>
+            <img src="./img/buk.png" alt="Піньята до Школи">
+            <h3>Піньята до Школи</h3>
+            <p>Ціна: ? грн</p>
+            <p>ТЕМАТИЧНІ ПІНЬЯТИ ДЛЯ СВЯТ У ШКОЛІ🥳</p>
+            <p>Ось приклад піньяти до свята Букваря😌🎉</p>
+            <p>✨ Всередині піньяти паперове конфеті та кульки, є отвір для самостійного наповнення цукерками🍭🍬</p>
+            <p>Приблизний розмір: 60-70 см</p>
+            <button class="order-btn" onclick="openOrderForm()">Замовити</button>
+        </div>
+    </div>
+
+    <div class="modal" id="modal39">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal39')">&times;</span>
+            <img src="./img/ponibig.png" alt="Піньята Єдиноріжки">
+            <h3>Піньята Єдиноріжки</h3>
+            <p>Ціна: ? грн</p>
+            <p>Один із великої кількості варіантів піньяти у вигляді Єдиноріжки☺️💗</p>
+            <p>✨ Всередині піньяти паперове конфеті та кульки, є отвір для самостійного наповнення цукерками🍭🍬</p>
+            <p>Приблизний розмір: 50-60 см</p>
+            <button class="order-btn" onclick="openOrderForm()">Замовити</button>
+        </div>
+    </div>
+
+    <div class="modal" id="modal40">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal40')">&times;</span>
+            <img src="./img/tractor.png" alt="Піньята Трактор">
+            <h3>Піньята Трактор</h3>
+            <p>Ціна: ? грн</p>
+            <p>У вигляді такої піньяти можна підготувати сюрприз не тільки для діток, а й для дорослих.☺️</p>
+            <p>✨ Всередині піньяти паперове конфеті та кульки, є отвір для самостійного наповнення цукерками🍭🍬</p>
+            <p>Приблизний розмір: до 1 метра</p>
+            <button class="order-btn" onclick="openOrderForm()">Замовити</button>
+        </div>
+    </div>
+
+    <div class="modal" id="modal41">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal41')">&times;</span>
+            <img src="./img/serd.png" alt="Піньята Серденько">
+            <h3>Піньята Серденько</h3>
+            <p>Ціна: ? грн</p>
+            <p>✨ Всередині піньяти паперове конфеті та кульки, є отвір для самостійного наповнення цукерками🍭🍬</p>
+            <p>Приблизний розмір: 50 см</p>
+            <button class="order-btn" onclick="openOrderForm()">Замовити</button>
+        </div>
+    </div>
+
+    <div class="modal" id="modal42">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal42')">&times;</span>
+            <img src="./img/seven.png" alt="Піньята Колесо">
+            <h3>Піньята Колесо</h3>
+            <p>Ціна: ? грн</p>
+            <p>✨ Всередині піньяти паперове конфеті та кульки, є отвір для самостійного наповнення цукерками🍭🍬</p>
+            <p>Приблизний розмір: 50 см</p>
+            <button class="order-btn" onclick="openOrderForm()">Замовити</button>
+        </div>
+    </div>
+
+    <div class="modal" id="modal43">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal43')">&times;</span>
+            <img src="./img/luna.png" alt="Піньята Луна">
+            <h3>Піньята Луна</h3>
+            <p>Ціна: ? грн</p>
+            <p>Надзвичайно мила піньята для будь-якого свята🤍✨</p>
+            <p>✨ Всередині піньяти паперове конфеті та кульки, є отвір для самостійного наповнення цукерками🍭🍬</p>
+            <p>Приблизний розмір: 50 см</p>
+            <button class="order-btn" onclick="openOrderForm()">Замовити</button>
+        </div>
+    </div>
+
+    <div class="modal" id="modal44">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal44')">&times;</span>
+            <img src="./img/tree.png" alt="Піньята у вигляді цифри 3">
+            <h3>Піньята у вигляді цифри 3</h3>
+            <p>Ціна: ? грн</p>
+            <p>Надзвичайно мила піньята для будь-якого свята🤍✨</p>
+            <p>Зробіть свято Вашої дитини незабутнім разом із нашими піньятами🌸</p>
+            <p>✨ Всередині піньяти паперове конфеті та кульки, є отвір для самостійного наповнення цукерками🍭🍬</p>
+            <p>Приблизний розмір: 50 см</p>
+            <button class="order-btn" onclick="openOrderForm()">Замовити</button>
+        </div>
+    </div>
+
+    <div class="modal" id="modal45">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal45')">&times;</span>
+            <img src="./img/dunats.png" alt="Піньята Пончик">
+            <h3>Піньята Пончик</h3>
+            <p>Ціна: ? грн</p>
+            <p>УСІ ОБОЖНЮЮТЬ ПОНЧИКИ 🍩 😍</p>
+            <p>Перед такою «смачненькою» піньятою ніхто не зможе встояти🤩</p>
+            <p>✨ Всередині піньяти паперове конфеті та кульки, є отвір для самостійного наповнення цукерками🍭🍬</p>
+            <p>Приблизний розмір: 50 см</p>
+            <button class="order-btn" onclick="openOrderForm()">Замовити</button>
+        </div>
+    </div>
+
+    <div class="modal" id="modal46">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal46')">&times;</span>
+            <img src="./img/piatsuper.png" alt="Піньята у вигляді цифри 5">
+            <h3>Піньята у вигляді цифри 5</h3>
+            <p>Ціна: ? грн</p>
+            <p>ПІНЬЯТИ У ВИГЛЯДІ ЦИФЕРОК✨</p>
+            <p>Циферка- чудовий варіант для дня народження🎊</p>
+            <p>Виготовимо будь-яку циферку в будь-якій тематиці😌</p>
+            <p>✨ Всередині піньяти паперове конфеті та кульки, є отвір для самостійного наповнення цукерками🍭🍬</p>
+            <p>Приблизний розмір: 50 см</p>
+            <button class="order-btn" onclick="openOrderForm()">Замовити</button>
+        </div>
+    </div>
+
+    <div class="modal" id="modal47">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal47')">&times;</span>
+            <img src="./img/tucha.png" alt="Піньята Хмаринка">
+            <h3>Піньята Хмаринка</h3>
+            <p>Ціна: ? грн</p>
+            <p>Будь-яку ідею зможемо втілити в життя🥳</p>
+            <p>✨ Всередині піньяти паперове конфеті та кульки, є отвір для самостійного наповнення цукерками🍭🍬</p>
+            <p>Приблизний розмір: 50 см</p>
+            <button class="order-btn" onclick="openOrderForm()">Замовити</button>
+        </div>
+    </div>
+
+
+
+
+
+    <div id="orderForm" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('orderForm')">&times;</span>
+            <h2>Замовлення піньяти</h2>
+            <form action="#" id="form" class="form__body">
+                <label for="firstName">Ім'я:</label>
+                <input type="text" id="firstName" class="form__input _req" name="firstName" placeholder="Ваше ім'я">
+
+                <label for="lastName">Прізвище:</label>
+                <input type="text" id="lastName" class="form__input _req" name="lastName" placeholder="Ваше прізвище">
+
+                <label for="phone">Номер телефону:</label>
+                <input type="tel" id="phone" class="form__input _req" name="phone" placeholder="+380XXXXXXXXX">
+
+                <label for="email">Електронна пошта:</label>
+                <input type="text" id="email" class="form__input _req _email" name="email" placeholder="example@gmail.com">
+
+                <label for="deadline">До якої дати виготовити піньяту:</label>
+                <input type="date" id="deadline" class="data _req" name="data">
+                 
+                <label for="pinyata">Впишіть назву піньяти яку ви хочете замовити:</label>
+                <input id="formMessage" class="form__input _req" name="message" placeholder="Назва піньяти" list="pinyata-list"></input>
+                <datalist id="pinyata-list">
+                    <option value="Піньята Бамблбі">
+                    <option value="Піньята Маквін">
+                    <option value="Піньята Гаррі Поттер">
+                    <option value="Піньята Куромі">
+                    <option value="Піньята Поні">
+                    <option value="Піньята Динозавр">
+                    <option value="Піньята Хелло Кіті">
+                    <option value="Піньята Футбольна">
+                    <option value="Піньята Барбі">
+                    <option value="Піньята Чікен Ган">
+                    <option value="Піньята Венздей">
+                    <option value="Піньята Фортнайт">
+                    <option value="Піньята Кріпер">
+                    <option value="Піньята Сонік">
+                    <option value="Піньята Супер Маріо">
+                    <option value="Піньята Веселка">
+                    <option value="Піньята Наруто">
+                    <option value="Піньята Huggy Wuggy">
+                    <option value="Піньята Міньйон">
+                    <option value="Піньята Angry Birds">
+                    <option value="Піньята Brawl Stars">
+                    <option value="Піньята Minecraft">
+                    <option value="Піньята Спайдермен">
+                    <option value="Піньята Щенячий патруль">
+                    <option value="Піньята Фламінго">
+                    <option value="Піньята Among Us">
+                    <option value="Піньята Кекс">
+                    <option value="Піньята Черепашки Ніндзя">
+                    <option value="Піньята у вигляді цифри 2">
+                    <option value="Піньята Зірка">
+                    <option value="Піньята Pop It">
+                    <option value="Піньята Супер-герої">
+                    <option value="Піньята Русалочка">
+                    <option value="Піньята Tik Tok">
+                    <option value="Піньята Бетмен">
+                    <option value="Піньята Міні Маус">
+                    <option value="Піньята Морозиво">
+                    <option value="Піньята до Школи">
+                    <option value="Піньята Єдиноріжки">
+                    <option value="Піньята Трактор">
+                    <option value="Піньята Серденько">
+                    <option value="Піньята Колесо">
+                    <option value="Піньята Луна">
+                    <option value="Піньята у вигляді цифри 3">
+                    <option value="Піньята Пончик">
+                    <option value="Піньята у вигляді цифри 5">
+                    <option value="Піньята Хмаринка">
+                </datalist>
+
+
+                
+
+                <select id="filling" name="candy" class="form__input _req">
+                    <option value="">Оберіть наповненя</option>
+                    <option value="без наповнення">Без цукерок</option>
+                    <option value="конфети звичайного класу">Цукерки звичайного класу +150 грн до вартості</option>
+                    <option value="конфети класу люкс">Цукерки класу люкс +250 грн до вартості</option>
+                    <option value="конфети класу преміум">Цукерки класу преміум +350 грн до вартості</option>
+                </select>
+
+                
+
+
+                <select id="ageGroup" name="age" class="form__input _req">
+                    <option value="">Оберіть вікову категорію</option>
+                    <option value="1-4" title="Піньята з прорізаним дном, та ланцюжком за який достатньо потягнути, щоб наповнення висипалось">1-4 роки</option>
+                    <option value="5-7" title="Піньята з прорізаним центром, по якому достатньо декілька разів вдарити, щоб наповнення висипалось">5-7 років</option>
+                    <option value="8-99" title="Піньята з надрізаним центром, по якому треба вдарити багато разів, щоб наповнення висипалось (придає драйву)">8-99 років</option>
+                </select>
+                
+                
+
+                <button type="submit" class="submit-btn">Замовити</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+    <section class="features" id="features">
+        <h2>Наші переваги</h2>
+        <p>Яскраві піньяти – свято, яке завжди з вами!</p>
+        <p>Шукаєте спосіб зробити свято незабутнім? Подаруйте собі та вашим гостям справжнє море радості, сміху та захоплення з нашими унікальними піньятами!</p>
+        <p>🎉 Чому саме наші піньяти?</p>
+        <p>Ексклюзивний дизайн. Кожна піньята створюється вручну, з любов’ю до деталей. Від класичних фігур до улюблених героїв – ми втілюємо всі ваші ідеї!</p>
+        <p>Ідеальний наповнювач. Цукерки, сюрпризи чи дрібні подарунки – ви самі обираєте, чим наповнити вашу піньяту. Ми пропонуємо і готові набори.</p>
+        <p>Підходить для будь-якого віку. Дитячі дні народження, весілля, корпоративи чи вечірки – наші піньяти принесуть радість кожному!</p>
+        <p>Легко замовити. Обирайте готові моделі або замовляйте індивідуальну піньяту за власним дизайном.</p>
+        <p>💥 Піньята – це не просто декор, це WOW-ефект для вашого свята!</p>
+        <p>Уявіть захоплення гостей, коли вони побачать піньяту на вашому святі. А момент її розбиття – справжній феєрверк емоцій!</p>
+        <p>📦Ми дбаємо про те, щоб ваша піньята прибула вчасно і в ідеальному стані.</p>
+        <p>Замовляйте прямо зараз, і ваше свято стане найяскравішою подією року!</p>
+        <p>📲 Натисніть кнопку "Замовити" або телефонуйте за номером +380 68 437 73 80.</p>
+        <p>✨ Зробіть кожен момент незабутнім з нашими піньятами!</p>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="reviews" id="reviews">
+        <h2>Відгуки</h2>
+        <div class="review-container">
+            <div class="review-box">
+                <p>⭐⭐⭐⭐⭐</p>
+                <p>«Ваша піньята врятувала наше свято!» – Ольга</p>
+            </div>
+            <div class="review-box">
+                <p>⭐⭐⭐⭐⭐</p>
+                <p>«Дуже дякую! Дитині піньяти дуже сподобались! Рекомендуємо брати всім діткам на день народження!» – Оксана</p>
+            </div>
+            <div class="review-box">
+                <p>⭐⭐⭐⭐</p>
+                <p>«Піньята сподобалось, але забули про конфеті» – Віталій</p>
+            </div>
+            <div class="review-box">
+                <p>⭐⭐⭐⭐⭐</p>
+                <p>«Все класно та круто, а головне вчасно» – Олексій</p>
+            </div>
+            <div class="review-box">
+                <p>⭐⭐⭐</p>
+                <p>«Не дуже сподобалась якість піньяти, а так все було добре» – Іванка</p>
+            </div>
+            <div class="review-box">
+                <p>⭐</p>
+                <p>«Піньята гімно, розбити не могли, якість позорна, ніколи більше не замовлю тут» – Лох</p>
+            </div>
+            <div class="review-box">
+                <p>⭐⭐⭐⭐⭐</p>
+                <p>«Мене попросили залишити відгук, тому 5 зірок» – Іван</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contacts" id="contacts">
+        <h2 style="padding-left: 40px;">Контакти</h2>
+        <p style="padding-left: 40px; margin-top: 10px;">Телефон: +380 68 437 73 80</p>
+        <p style="padding-left: 40px;">Електронна пошта: <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJlGVBBxTwRPdQpLgtNdVhqmDdFfzVCxzsMQNLWQgNQTDCBgMsmzNfsRlXBNttMpZPPxzfg">nserban179@gmail.com</a></p>
+        <p style="padding-left: 40px;">Instagram: <a href="https://www.instagram.com/pinyata.cv?igsh=NDhpeTdiYmR6bzcz">pinyata.cv</a></p>
+    </section>
+
+    <footer>
+
+    </footer>
+
+    <script src="siet.js"></script>
+</body>
+</html>
